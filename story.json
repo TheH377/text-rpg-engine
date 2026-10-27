@@ -1,0 +1,50 @@
+{
+  "start_scene": "intro",
+  "scenes": {
+    "intro": {
+      "text": "You wake up at the entrance of an ancient dungeon. You hold an old torch in your hand. Two paths lie ahead: one leads into a dark tunnel, the other leads up an illuminated staircase.",
+      "choices": [
+        {
+          "text": "Enter the dark tunnel",
+          "next_scene": "dark_tunnel"
+        },
+        {
+          "text": "Climb the staircase",
+          "next_scene": "staircase"
+        }
+      ]
+    },
+    "dark_tunnel": {
+      "text": "You descend into the shadows and hear a rustling sound. A wild goblin emerges from the darkness!",
+      "enemy": {
+        "name": "Wild Goblin",
+        "health": 35,
+        "attack": 8
+      },
+      "choices": [
+        {
+          "text": "Go to upstairs",
+          "next_scene": "win_goblin"
+        },
+        {
+          "text": "Run back to the start",
+          "next_scene": "intro"
+        }
+      ]
+    },
+    "staircase": {
+      "text": "The staircase leads to a locked chest. A health potion lies on top!",
+      "item": "Health Potion",
+      "choices": [
+        {
+          "text": "Take the potion and return to the fork",
+          "next_scene": "intro"
+        }
+      ]
+    },
+    "win_goblin": {
+      "text": "You have triumphed over the goblin and found the way out of the dungeon! Congratulations, you have completed the demo version!",
+      "choices": []
+    }
+  }
+}
